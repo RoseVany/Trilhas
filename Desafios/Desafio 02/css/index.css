@@ -1,0 +1,199 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color:#2135A6;
+}
+
+h1{
+    display: flex;
+    font-size: 50px;
+    margin: 5% 0 0 42px;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons{
+    display: flex;
+    justify-content: center;
+    margin: 0 0 12px 42px;
+}
+
+form{
+    width: 95%;
+}
+
+label{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+input{
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    padding-left: 18px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    border: 0.5px solid #CACACA;
+    background: #FFFAF2;
+    margin-left: 40px;
+}
+
+input::placeholder{
+    color: #000000;
+    font-weight: bold;
+}
+
+.data-nasc-label{
+    width: 33%;
+    height: 50px;
+    font-size: 14px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: 3%;
+}
+
+.data-nasc-field{
+    width: 27%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2px;
+    padding-left: 6px;
+}
+
+.box-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-container{
+    width: 870px;
+    height: 885px;
+    left: 131px;
+    border-radius: 20px;
+    position: relative;
+    display: inline-block;
+    background-color: #FFFFFF;
+}
+
+#cep_usuario{
+    width: 94%;
+    height: 48px;
+    margin-left: 9px;
+}
+
+#estado_usuario{
+    width: 33%;
+    height: 48px;
+    margin-left: 40px;
+}
+
+#cidade_usuario{
+    width: 82%;
+    height: 48px;
+    margin-left: 9px;
+}
+
+#rua_usuario{
+    width: 79%;
+    height: 48px;
+    margin-left: 40px;
+}
+
+#numero_usuario{
+    width: 12%;
+    height: 48px;
+    margin-left: 9px;
+}
+
+.file-drop-area{
+    width: 351px;
+    height: 61px;
+    background: #FFFFFF;
+    border: 1px solid #CACACA;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 40px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+}
+
+.file-drop-area.dragover{
+    background-color: #f0f0f0;
+}
+
+#selectButton1, #selectButton2{
+    display: flex;
+    margin: 0 10px;
+    color: #097E90;
+    width: 163px;
+    height: 34px;
+    border: 1px solid #097E90;
+    border-radius: 6px;
+    align-items: center;
+}
+
+#fileInput1, #fileInput2{
+    display: none;
+}
+
+.selectedFile{
+    display: flex;
+}
+
+#selectedFile1{
+    width: 100%;
+    display: flex;
+    margin-left: 40px;
+    justify-content: center;
+    font-size: 14px;
+}
+
+#selectedFile2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.upload-svg{
+    width: 60px;
+    height: 54px;
+    padding: 8px;
+}
+
+.right-container{
+    width: 640px;
+    height: 641px;
+    position: relative;
+    left: 130px;
+    display: flex;
+    flex-direction: column;
+}
+
+.trilha-inova{
+    width: 641px;
+    height: 640px;
+    padding-left: 2px;
+}
+
+.submit{
+    width: 250px;
+    height: 40px;
+    background: #FF9F76;
+    color: #FFFFFF;
+    font-size: 14px;
+    border: none;
+}

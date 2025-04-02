@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="57.313961"
+   height="51.732559"
+   viewBox="0 0 57.313961 51.732559"
+   fill="none"
+   version="1.1"
+   id="svg39"
+   sodipodi:docname="upload.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs39" />
+  <sodipodi:namedview
+     id="namedview39"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.3589744"
+     inkscape:cx="-66.226415"
+     inkscape:cy="-99.707547"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg39" />
+  <path
+     d="m 43.94442,17.52489 c 0.0195,0 0.0419,0 0.0614,0 6.93488,0 12.55814,5.63162 12.55814,12.58046 0,6.47721 -4.88372,11.81023 -11.16279,12.50512 M 43.94442,17.52489 c 0.0391,-0.46047 0.0614,-0.92651 0.0614,-1.39814 0,-8.4921 -6.8707,-15.37675 -15.34884,-15.37675 -8.02884,0 -14.61767,6.17582 -15.29302,14.04279 m 30.58046,2.7321 c -0.28744,3.17302 -1.53209,6.06697 -3.44651,8.38883 M 13.36396,14.79279 C 6.28675,15.46814 0.75,21.44024 0.75,28.70721 c 0,6.76465 4.79442,12.40465 11.16279,13.69954 m 1.45117,-27.61396 c 0.44093,-0.0419 0.88744,-0.0642 1.33953,-0.0642 3.14233,0 6.04186,1.04093 8.37209,2.79628"
+     stroke="#8f8881"
+     stroke-width="1.5"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     id="path5" />
+  <path
+     d="m 28.65698,28.65698 v 22.32558 m 0,-22.32558 c -1.95349,0 -5.60372,5.56465 -6.97674,6.97674 m 6.97674,-6.97674 c 1.95349,0 5.60651,5.56465 6.97674,6.97674"
+     stroke="#8f8881"
+     stroke-width="1.5"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     id="path6" />
+</svg>

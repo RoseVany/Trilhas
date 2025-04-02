@@ -1,0 +1,247 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    background-color: #2135A6;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+h1 {
+    font-size: 48px;
+    text-align: center;
+    color: #2135A6;
+    margin-top: 20px;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.box-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.left-container {
+    width: 45%;
+    max-width: 500px;
+    min-width: unset;
+    height: auto;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right-container {
+    width: 45%;
+    max-width: 500px;
+    min-width: unset;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.trilha-inova, .logos {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+}
+
+.textfield {
+    margin-bottom: 15px;
+}
+
+.two-columns, .three-columns {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.half-width {
+    width: calc(50% - 5px);
+}
+
+.third-width {
+    width: calc(33.33% - 7px);
+}
+
+.two-thirds-width {
+    width: calc(66.66% - 7px);
+}
+
+.small-width {
+    width: calc(15% - 5px);
+}
+
+label {
+    display: block;
+    width: 100%;
+    position: relative;
+    font-size: 14px;
+    color: #000000;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"] {
+    width: 100%;
+    height: 45px;
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 14px;
+    border: 1px solid #CACACA;
+    background: #FFFAF2;
+    outline: none;
+    color: #000000;
+}
+
+input::placeholder {
+    color: #989692;
+    font-weight: bold;
+}
+
+.file-label {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #2135A6;
+    text-align: left;
+    width: 100%;
+}
+
+.file-upload {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.file-drop-area {
+    width: 100%;
+    height: 146px;
+    background: #FFFFFF;
+    border: 2px dashed #CACACA;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-align: center;
+    transition: border-color 0.3s ease;
+}
+
+.file-drop-area.dragover {
+    border-color: #097E90;
+}
+
+#selectButton1 {
+    margin-top: 10px;
+    width: 70%;
+    padding: 10px 20px;
+    background: #097E90;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#fileInput1 {
+    display: none;
+}
+
+.selectedFile {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #097E90;
+}
+
+.submit-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.submit {
+    width: 250px;
+    height: 50px;
+    background: #FF9F76;
+    color: #FFFFFF;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submit:hover {
+    background: #FF7F50;
+}
+
+.attention-message {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #FF1E1E;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .box-container {
+        flex-direction: column;
+    }
+
+    .left-container, .right-container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="date"] {
+        height: 40px;
+        font-size: 12px;
+    }
+
+    .submit {
+        width: 150px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .two-columns, .three-columns {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .half-width, .third-width, .two-thirds-width, .small-width {
+        width: 100%;
+    }
+}

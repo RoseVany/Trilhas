@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
+    <title>Inscrição Trilhas INOVA</title>
+</head>
+<body>
+    <div class="box-container">
+        <div class="left-container">
+        <form id="uploadForm" action="" method="post" enctype="multipart/form-data">
+            <h1>Inscreva-se</h1>
+            <div class="icons">
+                <img src="imagens/icones.svg">
+            </div>
+            <div class="textfield">
+                <label>
+                    <input id="nome_usuario" type="text" name="nome_usuario" placeholder="Nome Completo" required>
+                </label>
+            </div>
+            <div class="textfield">
+                <label>
+                    <input id="email_usuario" type="text" name="email_usuario" placeholder="e-mail" required>
+                </label>
+            </div>
+            <div class="textfield">
+                <label>
+                    <input id="cpf_usuario" type="text" name="cpf_usuario" placeholder="CPF" required>
+                </label>
+            </div>
+            <div class="textfield">
+                <label>
+                    <input id="cel_usuario" type="text" name="cel_usuario" placeholder="Telefone" required>
+                </label>
+            </div>
+            <div class="textfield">
+                <label>
+                    <b class="data-nasc-label">Data de Nascimento:</b>
+                    <input class="data-nasc-field" type="date" name="data_nasc" required>
+                    <label>
+                        <input class="cep_usuario" id="cep_usuario" type="text" name="cep_usuario" placeholder="CEP" required>
+                    </label>
+                </label>
+            </div>
+            <div class="textfield">
+                <label>
+                    <input id="estado_usuario" type="text" name="estado_usuario" placeholder="Estado" required>
+                    <input id="cidade_usuario" type="text" name="cidade_usuario" placeholder="Cidade" required>
+                </label>
+            </div>
+            <div class="textfield">
+                <label>
+                    <input id="bairro_usuario" type="text" name="bairro_usuario" placeholder="Bairro" required>
+                </label>
+            </div>
+            <div class="textfield">
+                <label>
+                    <input id="rua_usuario" type="text" name="rua_usuario" placeholder="Rua" required>
+                    <input id="numero_usuario" type="text" name="numero_usuario" placeholder="Número" required>
+                </label>
+            </div>
+            <div style="display: flex; justify-content: center">
+                <div id="dropArea1" class="file-drop-area" ondragover="handleDragOver(event)" ondrop="handleFileDrop(event, 'dropArea1')">
+                    <img class="upload-svg" src="imagens/upload.svg" alt="Upload">
+                    <div>
+                        <div style="width: 160px">Selecione o arquivo ou arraste pra cá</div>
+                        <div style="color: #989692;">.jpg, .png ou .pdf</div>
+                    </div>
+                    <label for="fileInput1" id="selectButton1">Selecionar</label>
+                    <input type="file" id="fileInput1" name="fileInput" accept=".jpg, .png, .pdf" onchange="handleFileSelect(event, 'dropArea1')">
+                </div>
+            </div>
+            <div class="selectedFile">
+                <div id="selectedFile1"></div>
+                <div id="selectedFile2"></div>
+            </div>
+            <div style="color: #FF1E1E; font-size: 14px; margin-top: 10px; margin-left: 40px"><b>*Atenção: Todas as informações acima são obrigatórias</b></div>
+            <div style="display: flex; justify-content: center; margin-top: 10px">
+                <input class="submit" type="submit" value="Finalizar Inscrição">
+            </div>
+        </form>
+        </div>
+        <div class="right-container">
+            <img class="trilha-inova" src="imagens/trilhas_inova.svg" alt="Trilhas INOVA">
+            <img class="trilha-inova" src="imagens/logos.svg" alt="Trilhas INOVA">
+        </div>
+    </div>
+</body>
+<script>
+    function handleFileSelect(event, dropAreaId) {
+        const file = event.target.files[0];
+        console.log('Arquivo:', file.name, 'na área:', dropAreaId);
+
+        const selectedFileDiv = document.getElementById('selectedFile' + dropAreaId.slice(-1));
+        selectedFileDiv.textContent = 'Arquivo: ' + file.name;
+    }
+
+    function handleDragOver(event) {
+        event.preventDefault();
+        event.target.classList.add('dragover');
+    }
+
+    function handleFileDrop(event, dropAreaId) {
+        event.preventDefault();
+        event.target.classList.remove('dragover');
+        const files = event.dataTransfer.files;
+        if (files.length > 0) {
+            handleFileSelect({ target: { files: files } }, dropAreaId);
+        }
+    }
+</script>
+</html>

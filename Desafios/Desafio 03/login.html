@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Trilhas INOVA</title>
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+<div class="box-container">
+  <div class="left-container">
+    <div class="logo">
+      <img class="trilha-inova" src="imagens/trilhas_inova.svg" alt="Trilhas INOVA">
+    </div>
+    <form id="loginForm">
+      <h1>Login</h1>
+      <div class="textfield">
+        <input id="loginId" type="text" placeholder="ID de Usuário" required>
+      </div>
+      <div class="textfield">
+        <input id="loginSenha" type="password" placeholder="Senha" required>
+      </div>
+      <div class="submit-container">
+        <input class="submit" type="submit" value="Entrar">
+      </div>
+    </form>
+  </div>
+</div>
+<script>
+  document.getElementById('loginForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const storedData = JSON.parse(localStorage.getItem('userData'));
+    const loginId = document.getElementById('loginId').value;
+    const loginSenha = document.getElementById('loginSenha').value;
+
+    if (storedData && storedData.idUsuario === loginId && storedData.senha === loginSenha) {
+      alert('Login realizado com sucesso!');
+    } else {
+      alert('ID de usuário ou senha incorretos.');
+    }
+  });
+</script>
+</body>
+</html>

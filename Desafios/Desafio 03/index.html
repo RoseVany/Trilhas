@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição Trilhas INOVA</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script defer src="js/main.js"></script>
+</head>
+<body>
+<div class="box-container">
+    <div class="left-container">
+        <form id="uploadForm" action="" method="post" enctype="multipart/form-data">
+            <h1>Inscreva-se</h1>
+            <div class="icons">
+                <img src="imagens/icones.svg" alt="Ícones">
+            </div>
+            <div class="textfield full-width">
+                <label>
+                    <input id="nome_usuario" type="text" name="nome_usuario" placeholder="Nome Completo" required>
+                </label>
+            </div>
+            <div class="two-columns">
+                <div class="textfield half-width">
+                    <label>
+                        <input id="email_usuario" type="email" name="email_usuario" placeholder="E-mail" required>
+                    </label>
+                </div>
+                <div class="textfield half-width">
+                    <label>
+                        <input id="cpf_usuario" type="text" name="cpf_usuario" placeholder="CPF" required>
+                    </label>
+                </div>
+            </div>
+            <div class="two-columns">
+                <div class="textfield half-width">
+                    <label for="cel_usuario">Telefone:</label>
+                    <input id="cel_usuario" type="text" name="cel_usuario" placeholder="(98) 9000000-00" required>
+                </div>
+                <div class="textfield half-width">
+                    <label for="data_nasc">Data de Nascimento:</label>
+                    <input id="data_nasc" class="data-nasc-field" type="date" name="data_nasc" required>
+                </div>
+            </div>
+            <div class="three-columns">
+                <div class="textfield third-width">
+                    <label>
+                        <input id="cep_usuario" type="text" name="cep_usuario" placeholder="CEP" required>
+                    </label>
+                </div>
+                <div class="textfield third-width">
+                    <label>
+                        <input id="estado_usuario" type="text" name="estado_usuario" placeholder="Estado" readonly>
+                    </label>
+                </div>
+                <div class="textfield third-width">
+                    <label>
+                        <input id="cidade_usuario" type="text" name="cidade_usuario" placeholder="Cidade" readonly>
+                    </label>
+                </div>
+            </div>
+            <div class="three-columns">
+                <div class="textfield third-width">
+                    <label>
+                        <input id="bairro_usuario" type="text" name="bairro_usuario" placeholder="Bairro" readonly>
+                    </label>
+                </div>
+                <div class="textfield two-thirds-width">
+                    <label>
+                        <input id="rua_usuario" type="text" name="rua_usuario" placeholder="Rua" readonly>
+                    </label>
+                </div>
+                <div class="textfield small-width">
+                    <label>
+                        <input id="numero_usuario" type="text" name="numero_usuario" placeholder="Nº" required>
+                    </label>
+                </div>
+            </div>
+            <div class="two-columns">
+                <div class="textfield half-width">
+                    <label>
+                        <input id="id_usuario" type="text" name="id_usuario" placeholder="ID de Usuário" required>
+                    </label>
+                </div>
+                <div class="textfield half-width">
+                    <label>
+                        <input id="senha_usuario" type="password" name="senha_usuario" placeholder="Senha" required>
+                    </label>
+                </div>
+            </div>
+            <div class="file-label">
+                <b>Anexar documentação necessária:</b>
+            </div>
+            <div class="file-upload full-width">
+                <div id="dropArea1" class="file-drop-area" ondragover="handleDragOver(event)" ondrop="handleFileDrop(event, 'dropArea1')">
+                    <img class="upload-svg" src="imagens/upload.svg" alt="Upload">
+                    <div>
+                        <div>Selecione o arquivo ou arraste pra cá</div>
+                        <div style="color: #989692;">.jpg, .png ou .pdf</div>
+                    </div>
+                    <label for="fileInput1" id="selectButton1">Selecionar</label>
+                    <input type="file" id="fileInput1" name="fileInput" accept=".jpg, .png, .pdf" onchange="handleFileSelect(event, 'dropArea1')">
+                </div>
+                <div class="selectedFile">
+                    <div id="selectedFile1"></div>
+                </div>
+            </div>
+            <div class="submit-container full-width">
+                <input class="submit" type="submit" value="Finalizar Inscrição">
+            </div>
+            <div class="attention-message full-width">
+                <b>*Atenção: Todas as informações acima são obrigatórias</b>
+            </div>
+        </form>
+    </div>
+    <div class="right-container">
+        <img class="trilha-inova" src="imagens/trilhas_inova.svg" alt="Trilhas INOVA">
+        <img class="logos" src="imagens/logos.svg" alt="Logos">
+    </div>
+</div>
+</body>
+</html>
