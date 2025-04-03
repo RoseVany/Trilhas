@@ -24,7 +24,7 @@ Passos para execução:
     git clone https://github.com/RoseVany/Trilhas.git
  ```
 - 2. Navegue até o diretório do projeto
-- 3. Localize e abra o arquivo `index.html` no navegador
+- 3. Localize e abra os arquivos `index.html` e `login.html`  no navegador
 - 4. Teste as funcionalidades:
   - Preencha o formulário de inscrição e teste as validações.
   - Acesse a tela de login e teste o acesso com o ID de usuário e senha cadastrados.
