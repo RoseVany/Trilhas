@@ -15,37 +15,47 @@
             <div class="icons">
                 <img src="imagens/icones.svg" alt="Ícones">
             </div>
+            <!-- Campo Nome Completo -->
             <div class="textfield full-width">
                 <label>
                     <input id="nome_usuario" type="text" name="nome_usuario" placeholder="Nome Completo" required>
                 </label>
+                <!-- Validar se o campo está preenchido -->
             </div>
+            <!-- Campos E-mail e CPF -->
             <div class="two-columns">
                 <div class="textfield half-width">
                     <label>
                         <input id="email_usuario" type="email" name="email_usuario" placeholder="E-mail" required>
+                        <!-- Validar formato de e-mail usando JavaScript -->
                     </label>
                 </div>
                 <div class="textfield half-width">
                     <label>
                         <input id="cpf_usuario" type="text" name="cpf_usuario" placeholder="CPF" required>
+                        <!-- Validar formato de CPF usando JavaScript -->
                     </label>
                 </div>
             </div>
+            <!-- Campos Telefone e Data de Nascimento -->
             <div class="two-columns">
                 <div class="textfield half-width">
                     <label for="cel_usuario">Telefone:</label>
                     <input id="cel_usuario" type="text" name="cel_usuario" placeholder="(98) 9000000-00" required>
+                    <!-- Validar formato de telefone usando JavaScript -->
                 </div>
                 <div class="textfield half-width">
                     <label for="data_nasc">Data de Nascimento:</label>
                     <input id="data_nasc" class="data-nasc-field" type="date" name="data_nasc" required>
+                    <!-- Validar idade mínima (ex.: maior de 18 anos) -->
                 </div>
             </div>
+            <!-- Campos CEP, Estado e Cidade -->
             <div class="three-columns">
                 <div class="textfield third-width">
                     <label>
                         <input id="cep_usuario" type="text" name="cep_usuario" placeholder="CEP" required>
+                        <!-- Validar formato de CEP usando JavaScript -->
                     </label>
                 </div>
                 <div class="textfield third-width">
@@ -59,6 +69,7 @@
                     </label>
                 </div>
             </div>
+            <!-- Campos Bairro, Rua e Número -->
             <div class="three-columns">
                 <div class="textfield third-width">
                     <label>
@@ -76,18 +87,22 @@
                     </label>
                 </div>
             </div>
+            <!-- Novos campos: ID do Usuário e Senha -->
             <div class="two-columns">
                 <div class="textfield half-width">
                     <label>
                         <input id="id_usuario" type="text" name="id_usuario" placeholder="ID de Usuário" required>
+                        <!-- Validar se o campo está preenchido -->
                     </label>
                 </div>
                 <div class="textfield half-width">
                     <label>
                         <input id="senha_usuario" type="password" name="senha_usuario" placeholder="Senha" required>
+                        <!-- Validar força da senha (ex.: mínimo 8 caracteres) -->
                     </label>
                 </div>
             </div>
+            <!-- Upload de Arquivo -->
             <div class="file-label">
                 <b>Anexar documentação necessária:</b>
             </div>
@@ -105,9 +120,12 @@
                     <div id="selectedFile1"></div>
                 </div>
             </div>
+            <!-- Botão de Envio -->
             <div class="submit-container full-width">
-                <input class="submit" type="submit" value="Finalizar Inscrição">
+                <input class="submit" type="submit" value="Finalizar Inscrição" onclick="salvarDados()">
+                <!-- Salvar dados no LocalStorage/SessionStorage ao enviar -->
             </div>
+            <!-- Mensagem de Atenção -->
             <div class="attention-message full-width">
                 <b>*Atenção: Todas as informações acima são obrigatórias</b>
             </div>

@@ -10,34 +10,50 @@
 <div class="box-container">
   <div class="left-container">
     <div class="logo">
+      <!-- Logo da aplicação -->
       <img class="trilha-inova" src="imagens/trilhas_inova.svg" alt="Trilhas INOVA">
     </div>
     <form id="loginForm">
       <h1>Login</h1>
+      <!-- Campo ID de Usuário -->
       <div class="textfield">
         <input id="loginId" type="text" placeholder="ID de Usuário" required>
+        <!-- Validar se o campo está preenchido -->
       </div>
+      <!-- Campo Senha -->
       <div class="textfield">
         <input id="loginSenha" type="password" placeholder="Senha" required>
+        <!-- Validar se o campo está preenchido -->
       </div>
+      <!-- Botão de Login -->
       <div class="submit-container">
         <input class="submit" type="submit" value="Entrar">
+        <!-- Validar ID e Senha no LocalStorage -->
       </div>
     </form>
   </div>
 </div>
 <script>
+  // Adiciona um listener ao formulário para interceptar o envio
   document.getElementById('loginForm').addEventListener('submit', function (event) {
-    event.preventDefault();
+    event.preventDefault(); // Impede o envio padrão do formulário
 
-    const storedData = JSON.parse(localStorage.getItem('userData'));
-    const loginId = document.getElementById('loginId').value;
-    const loginSenha = document.getElementById('loginSenha').value;
+    // Captura os valores dos campos do formulário
+    const storedData = JSON.parse(localStorage.getItem('userData')); // Recupera os dados salvos no LocalStorage
+    const loginId = document.getElementById('loginId').value.trim();
+    const loginSenha = document.getElementById('loginSenha').value.trim();
 
+    // **Validação de campos obrigatórios**
+    if (!loginId || !loginSenha) {
+      alert('Todos os campos são obrigatórios.');
+      return;
+    }
+
+    // **Validação de ID e Senha**
     if (storedData && storedData.idUsuario === loginId && storedData.senha === loginSenha) {
-      alert('Login realizado com sucesso!');
+      alert('Login realizado com sucesso!'); // Exibe mensagem de sucesso
     } else {
-      alert('ID de usuário ou senha incorretos.');
+      alert('ID de usuário ou senha incorretos.'); // Exibe mensagem de erro
     }
   });
 </script>

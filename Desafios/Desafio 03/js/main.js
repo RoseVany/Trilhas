@@ -1,6 +1,8 @@
+// Adiciona um listener ao formulário para interceptar o envio
 document.getElementById('uploadForm').addEventListener('submit', function (event) {
-    event.preventDefault();
+    event.preventDefault(); // Impede o envio padrão do formulário
 
+    // Captura os valores dos campos do formulário
     const nome = document.getElementById('nome_usuario').value.trim();
     const email = document.getElementById('email_usuario').value.trim();
     const cpf = document.getElementById('cpf_usuario').value.replace(/\D/g, ''); // Remove máscara antes de validar
@@ -15,26 +17,26 @@ document.getElementById('uploadForm').addEventListener('submit', function (event
     const idUsuario = document.getElementById('id_usuario').value.trim();
     const senha = document.getElementById('senha_usuario').value.trim();
 
-    // Validação de campos obrigatórios
+    // **Validação de campos obrigatórios**
     if (!nome || !email || !cpf || !telefone || !dataNascimento || !cep || !estado || !cidade || !bairro || !rua || !numero || !idUsuario || !senha) {
         alert('Todos os campos são obrigatórios.');
         return;
     }
 
-    // Validação de e-mail
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // **Validação de e-mail**
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Expressão regular para validar e-mail
     if (!emailRegex.test(email)) {
         alert('Por favor, insira um e-mail válido.');
         return;
     }
 
-    // Validação de CPF
+    // **Validação de CPF**
     if (!validarCPF(cpf)) {
         alert('Por favor, insira um CPF válido.');
         return;
     }
 
-    // Salvar dados no localStorage
+    // **Armazenamento temporário dos dados preenchidos**
     const formData = {
         nome,
         email,
@@ -51,13 +53,13 @@ document.getElementById('uploadForm').addEventListener('submit', function (event
         senha
     };
 
-    localStorage.setItem('userData', JSON.stringify(formData));
-    alert('Inscrição realizada com sucesso!');
+    localStorage.setItem('userData', JSON.stringify(formData)); // Salva os dados no LocalStorage
+    alert('Inscrição realizada com sucesso!'); // Exibe mensagem de confirmação
 });
 
-// Função para validar CPF
+// **Função para validar CPF**
 function validarCPF(cpf) {
-    if (cpf.length !== 11 || /^(.)\1+$/.test(cpf)) return false;
+    if (cpf.length !== 11 || /^(.)\1+$/.test(cpf)) return false; // Verifica se o CPF tem 11 dígitos e não é uma sequência repetida
 
     let soma = 0;
     for (let i = 0; i < 9; i++) soma += parseInt(cpf.charAt(i)) * (10 - i);
@@ -74,7 +76,7 @@ function validarCPF(cpf) {
     return true;
 }
 
-// Formatar CPF automaticamente
+// **Formatar CPF automaticamente**
 document.getElementById('cpf_usuario').addEventListener('input', function (e) {
     let value = e.target.value.replace(/\D/g, ''); // Remove caracteres não numéricos
     if (value.length > 11) value = value.slice(0, 11); // Limita a 11 dígitos
@@ -91,7 +93,7 @@ document.getElementById('cpf_usuario').addEventListener('input', function (e) {
     e.target.value = value;
 });
 
-// Formatar telefone automaticamente
+// **Formatar telefone automaticamente**
 document.getElementById('cel_usuario').addEventListener('input', function (e) {
     let value = e.target.value.replace(/\D/g, '');
     if (value.length > 11) value = value.slice(0, 11);
@@ -100,7 +102,7 @@ document.getElementById('cel_usuario').addEventListener('input', function (e) {
     e.target.value = value;
 });
 
-// Buscar endereço pelo CEP
+// **Buscar endereço pelo CEP**
 document.getElementById('cep_usuario').addEventListener('blur', async function () {
     const cep = this.value.replace(/\D/g, '');
     if (cep.length !== 8) {
@@ -125,7 +127,7 @@ document.getElementById('cep_usuario').addEventListener('blur', async function (
     }
 });
 
-// Funções de upload de arquivo
+// **Funções de upload de arquivo**
 function handleFileSelect(event, dropAreaId) {
     const file = event.target.files[0];
     console.log('Arquivo:', file.name, 'na área:', dropAreaId);
